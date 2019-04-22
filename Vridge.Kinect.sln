@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vridge.Kinect", "Vridge.Kinect\Vridge.Kinect.csproj", "{C395CDA5-283C-406F-9348-4D35D3F56482}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VRE.Vridge.API.Client", "VRE.Vridge.API.Client\VRE.Vridge.API.Client.csproj", "{8BFD4BBB-29AF-4255-8367-1310A3940ABA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C395CDA5-283C-406F-9348-4D35D3F56482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C395CDA5-283C-406F-9348-4D35D3F56482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C395CDA5-283C-406F-9348-4D35D3F56482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C395CDA5-283C-406F-9348-4D35D3F56482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BFD4BBB-29AF-4255-8367-1310A3940ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFD4BBB-29AF-4255-8367-1310A3940ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFD4BBB-29AF-4255-8367-1310A3940ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFD4BBB-29AF-4255-8367-1310A3940ABA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A2B1847-E072-4396-A483-896D98BD8292}
+	EndGlobalSection
+EndGlobal
