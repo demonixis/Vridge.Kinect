@@ -1,11 +1,5 @@
 ﻿using VRE.Vridge.API.Client.Messages.BasicTypes;
 using VRE.Vridge.API.Client.Messages.v3.Controller;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Numerics;
 using VRE.Vridge.API.Client.Remotes;
 
