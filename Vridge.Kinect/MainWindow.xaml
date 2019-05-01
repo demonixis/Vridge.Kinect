@@ -5,37 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vridge.Kinect"
         mc:Ignorable="d"
-        Title="MainWindow" Height="156.977" Width="240.116">
+        Title="Vridge.Kinect" Height="185.777" Width="251.716" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="0.25*" />
+            <RowDefinition Height="20" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Border Margin="5" Grid.Row="0" Grid.Column="1">
-            <StackPanel>
-                <TextBlock Text="Settings" FontWeight="DemiBold" />
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Text="Port" VerticalAlignment="Center" Width="100"/>
-                    <ComboBox Width="115" SelectedIndex="0" x:Name="SerialPortName">
-                        <ComboBoxItem>COM1</ComboBoxItem>
-                    </ComboBox>
-                </StackPanel>
+        <StackPanel Margin="5" Grid.Row="0" >
+            <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 5">
+                <TextBlock HorizontalAlignment="Left" Text="Kinect Type" VerticalAlignment="Center" Width="100"/>
+                <ComboBox Width="115" SelectedIndex="0" x:Name="KinectTypeCombo" SelectionChanged="KinectTypeCombo_Selected">
+                    <ComboBoxItem>Xbox One</ComboBoxItem>
+                    <ComboBoxItem>Xbox 360</ComboBoxItem>
+                </ComboBox>
             </StackPanel>
-        </Border>
+            <CheckBox Content="Send Left Position" IsChecked="True" x:Name="SendLeftPosition" Click="SendLeftPosition_Click" />
+            <CheckBox Content="Send Left Rotation" IsChecked="True" x:Name="SendLeftRotation" Click="SendLeftRotation_Click" />
+            <CheckBox Content="Send Right Position" IsChecked="True" x:Name="SendRightPosition" Click="SendRightPosition_Click" />
+            <CheckBox Content="Send Right Rotation" IsChecked="True" x:Name="SendRightRotation" Click="SendRightRotation_Click" />
+            <StackPanel  Orientation="Horizontal" Margin="5">
+                <Button Content="Connect" Tag="Connect" Width="100" Margin="0, 0, 15, 0" Click="OnConnectClicked"></Button>
+                <Button Content="Close" Tag="Close" Width="100" Click="OnShutdownClick"></Button>
+            </StackPanel>
+        </StackPanel>
         <Border Margin="5" Grid.Row="1" Grid.Column="1">
             <StackPanel>
-                <TextBlock Text="Actions" FontWeight="DemiBold" />
-                <StackPanel  Orientation="Horizontal">
-                    <Button Content="Connect" Tag="Connect" Width="100" Margin="0, 0, 15, 0" Click="OnActionClicked"></Button>
-                    <Button Content="Close" Tag="Close" Width="100"></Button>
-                </StackPanel>
+
             </StackPanel>
         </Border>
-        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="2">
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Background="LightGray">
             <TextBlock Text="Not Connected" x:Name="ConnectionStatus" HorizontalAlignment="Right" />
         </StackPanel>
     </Grid>

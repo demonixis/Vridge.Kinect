@@ -32,6 +32,11 @@ namespace KinectLib.Xbox360
             m_TrackingData.Initialize();
         }
 
+        public bool IsAvailable()
+        {
+            return KinectSensor.KinectSensors.Count > 0;
+        }
+
         public bool Start()
         {
             if (KinectSensor.KinectSensors.Count > 0)
@@ -47,7 +52,7 @@ namespace KinectLib.Xbox360
             return true;
         }
 
-        public bool Stop()
+        public void Stop()
         {
             if (m_KinectSensor != null)
             {
@@ -55,10 +60,7 @@ namespace KinectLib.Xbox360
                 m_KinectSensor.Stop();
                 m_KinectSensor.Dispose();
                 m_KinectSensor = null;
-                return true;
             }
-
-            return false;
         }
 
         private void OnSkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs e)

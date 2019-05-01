@@ -37,9 +37,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Kinect.2.0.1410.19000\lib\net45\Microsoft.Kinect.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Numerics" />
@@ -71,7 +68,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="VridgeTrackedDevice.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -105,6 +101,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KinectLib.Xbox360\KinectLib.Xbox360.csproj">
+      <Project>{5a2592c7-f59f-4e43-acb5-1367b6c2e496}</Project>
+      <Name>KinectLib.Xbox360</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KinectLib.XboxOne\KinectLib.XboxOne.csproj">
+      <Project>{d2eb1b84-6183-460b-b7d7-0c0bcd14e9a6}</Project>
+      <Name>KinectLib.XboxOne</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VRE.Vridge.API.Client\VRE.Vridge.API.Client.csproj">
       <Project>{8bfd4bbb-29af-4255-8367-1310a3940aba}</Project>
       <Name>VRE.Vridge.API.Client</Name>

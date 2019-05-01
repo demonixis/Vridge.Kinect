@@ -1,8 +1,8 @@
 # Vridge.Kinect
 
-Vridge bridge using for the Kinect (Xbox One) sensor. Still very WIP, don't expect it to work now.
+This is a Kinect driver for Vridge that send data for head, left and right hand. The driver works with Kinect for Xbox One and Xbox 360.
+It's possible to send specific data (only head, left position, right rotation...). This driver only works on x64 systems.
 
-Kinect for Xbox One required, the 360 one will be supported just after a working build.
 
 ## License
 This project is released under the MIT License.
