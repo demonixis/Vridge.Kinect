@@ -98,7 +98,7 @@ namespace KinectLib.Xbox360
                                 UpdateJoint(ref m_TrackingData.LeftTransform, joint, i);
                                 trackedBones++;
                             }
-                            else if (joint.JointType == JointType.HandLeft)
+                            else if (joint.JointType == JointType.HandRight)
                             {
                                 UpdateJoint(ref m_TrackingData.RightTransform, joint, i);
                                 trackedBones++;
